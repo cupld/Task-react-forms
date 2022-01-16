@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Student(props) {
+function Student(deleteStudent, student) {
     const student = props.student
     return (
 
@@ -11,7 +11,7 @@ function Student(props) {
                 <li>phone number :{student.phoneNumber}</li>
                 <li>power: {student.power}</li>
             </ul>
-            <p className="delete">delete</p>
+            <p className="delete" onClick={() => deleteStudent.id(student)}>delete</p>
         </div>
 
     )
